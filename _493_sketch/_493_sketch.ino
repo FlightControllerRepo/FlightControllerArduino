@@ -76,8 +76,8 @@ void loop() {
   for(int i = 0; i< numSensors; i++) { 
       dist = getDistance(trigPins[i], echoPins[i]);
       if (dist < 15) { //tinker/change
-        // turn 180 degrees (relative to current yaw) at 5 degrees per second, clockwise
-        sendMavlinkMessage(MAV_CMD_CONDITION_YAW, 180.0, 5.0, 1, 1, 0, 0, 0);
+        // turn 180 degrees (relative to current yaw) at 60 degrees per second, clockwise
+        sendMavlinkMessage(MAV_CMD_CONDITION_YAW, 180.0, 60.0, 1, 1, 0, 0, 0);
       }
       delay(50);
     }
