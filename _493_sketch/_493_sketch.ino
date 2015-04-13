@@ -52,10 +52,6 @@ int target_compid = MAV_COMP_ID_PRIMARY;
 void setup() {
   Serial.begin(9600);
   Serial1.begin(57600);
-  
-  for (int i = 0; i < 10; i++) {// tinker/change
-    sendArm();
-  }
 }
 
 void sendArm() {
