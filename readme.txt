@@ -1,0 +1,5 @@
+This is the readme for the Arduino sensor platform of our project.
+
+	This purpose of project was to build a rudimentary sensor platform to handle collisions and make an IRIS+ react accordingly. This application works as an intermediary to the telemetry radio and the Pixhawk micro controller. This means that our app is responsible for taking in messages from the radio on one serial pin, and writing them out to the Pixhawk on another. The same concept applies in the reverse direction.
+	Further our app is responsible for taking in sensor input, and writing out the corresponding Mavlink messages to make the copter react. This is done with ultrasonic sensor mounted on the sides of the Pixhawk. 
+	With the correct wiring the Arduino mega will not need an external power supply. This can be done by taking the voltage from the telemetry port, and connection it to the Vin on the Arduino, further ground should go to ground, and the Pixhawk tx should go to Arduino rx1, and Pixhawk rx should go to Arduino tx1. For the radio you must go ground to ground, and 5v on the Arduino to 5v on the radio. The radio tx should go to Arduino rx2, and Arduino rx should go to Arduino tx2.
